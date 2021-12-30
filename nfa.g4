@@ -8,7 +8,7 @@ define_fun      : PAR_OPEN DEFINE_FUN_KW IDENTIFIER fun_params any_type fun_cont
 fun_params      : PAR_OPEN fun_params_inner PAR_CLOSE       ;
 fun_params_inner: fun_param*                                ;
 fun_param       : PAR_OPEN IDENTIFIER any_type PAR_CLOSE    ;
-fun_contents    : statement*                                ;
+fun_contents    : statement                                 ;
 
 statement       : (let | expr)      ;
 any_type        : (TYPE_INT_KW | TYPE_BOOL_KW | TYPE_STRING_KW)     ;
